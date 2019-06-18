@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Lobster here.
+ * Class to represent a lobster.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jacob Smith
+ * @version 18/06/2019
  */
 public class Lobster extends Actor
 {   
@@ -17,39 +17,49 @@ public class Lobster extends Actor
         eat();
     }   
     
+    /**
+     * moveAround - Move the lobster around.
+     */
     public void moveAround() {
+        // move
         move(4);
         
+        // turn randomly
         if (Greenfoot.getRandomNumber(100) < 10) {
             turn(Greenfoot.getRandomNumber(90) -45);
         }
         
+        // if the lobster hits the edge of the world, turn 180 degrees
         if ((getX() <= 5 || getX() >= getWorld().getWidth() - 5) || (getY() <= 5 || getY() >= getWorld().getHeight() - 5)) {
             turn(180);
         }
    }
    
+   /**
+    * eat - Logic for making the lobster eat worms.
+    */
    public void eat() {
-       // get the crab which is next to the crab
+        // get everything we need
+        World world;
+        world = getWorld();
+
         Actor crab;
         crab = getOneObjectAtOffset(0, 0, Crab.class);
         
         // if the crab exists
         if (crab != null) {
-            // get the world
-            World world;
-            world = getWorld();
-            
             // remove the worm
             world.removeObject(crab);
             
             // remove a life from the crab
-            Crab.lives = Crab.lives - 1;
+            Crab.lives--;
             
+            // if there are still more lives, add a new crab
             if (Crab.lives > 0) {
                 world.addObject(crab, 282, 278);
             }
             
+            // if there are no more lives, remove the world
             if (Crab.lives == 0) {
                 world.removeObjects(world.getObjects(null));
             }
@@ -58,7 +68,7 @@ public class Lobster extends Actor
             Greenfoot.playSound("eating.wav");
             
             // update the lives
-            world.showText("Lives: "+Crab.lives, 500, 25); 
+            world.showText("Lives: " + Crab.lives, 500, 25); 
         }
         
         Actor worm;
@@ -66,11 +76,7 @@ public class Lobster extends Actor
         
         // if the worm exists
         if (worm != null) {
-            // get the world
-            World world;
-            world = getWorld();
-            
-            // remove the world
+            // remove the worm
             world.removeObject(worm);
             
             // play the eating sound
@@ -79,8 +85,8 @@ public class Lobster extends Actor
             // decrease the crab's score
             Crab.score = Crab.score > 0 ? Crab.score - 1 : 0;
             
-            // update the scores
-            world.showText("Score: "+Crab.score, 50, 25);
+            // update the score
+            world.showText("Score: " + Crab.score, 50, 25);
         }
    }
 }

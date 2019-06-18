@@ -1,32 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CrabWorld here.
+ * Class to represent the world.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jacob Smith
+ * @version 18/06/2019
  */
 public class CrabWorld extends World
 {
-
-    /**
-     * Constructor for objects of class CrabWorld.
-     * 
-     */
-    public CrabWorld()
-    {    
+    // constructor
+    public CrabWorld() {    
         super(560, 560, 1); 
 
         prepare();
     }
 
     /**
-     * Prepare the world for the start of the program. That is: create the initial
-     * objects and add them to the world.
+     * Prepare the world for the start of the program.
      */
-    private void prepare()
-    {
-        // add crab and lobster
+    private void prepare() {
+        // spawn the crab and lobster
         Crab crab = new Crab();
         addObject(crab, 150, 50);
         
@@ -39,7 +32,7 @@ public class CrabWorld extends World
             addObject(worm, Greenfoot.getRandomNumber(540), Greenfoot.getRandomNumber(540));
         }
 
-        // text
+        // show the text
         showText("Score: 0", 50, 25);
         showText("Round: 1", 500, 25);
         showText("Lives: 3", 50, 525);

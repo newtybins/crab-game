@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Worm here.
+ * Class to represent a worm.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jacob Smith
+ * @version 18/06/2019
  */
 public class Worm extends Actor
 {
@@ -12,7 +12,7 @@ public class Worm extends Actor
      * Act - do whatever the Worm wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
+    public void act() {
+        // do nothing.
     }    
 }

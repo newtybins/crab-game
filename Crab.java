@@ -1,7 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Crab extends Actor
-{    
+/**
+ * Class to represent the crab.
+ * 
+ * @author Jacob Smith
+ * @version 18/06/2019
+ */
+public class Crab extends Actor {    
     public static int score = 0;
     public static int lives = 3;
     private int round = 1;
@@ -50,10 +55,10 @@ public class Crab extends Actor
      * gets called.
      */
     public void eat() {
+        // get everything we need
         World world;
         world = getWorld();
         
-        // get the worm which is next to the crab
         Actor worm;
         worm = getOneObjectAtOffset(0, 0, Worm.class);
         
@@ -74,7 +79,7 @@ public class Crab extends Actor
             
             // if that was the last worm
             if(world.getObjects(Worm.class).size() == 0) {
-                // move up a round and update the text
+                // increment the round and update the text
                 round++;
                 world.showText("Round: "+round, 300, 25);
                 
@@ -88,27 +93,34 @@ public class Crab extends Actor
                 Lobster lobster = new Lobster();
                 world.addObject(lobster, 520, 41);
                 
+                // update the ammo
                 ammo = world.getObjects(Lobster.class).size();
-                
-                // show the ammo
                 world.showText("Ammo: "+ammo, 500, 525);
             }
         }
     }
     
+    /**
+     * Shoot - Logic for making the crab shoot bullets.
+     */
     public void shoot() {
+        // get everything we need
         Bullet bullet;
         bullet = new Bullet(getRotation());
         
         World world;
         world = getWorld();
         
+        // if the ammo is greater than 0, decrement the ammo
         if (ammo > 0) ammo--;
+
+        // else if the ammo is at 0, don't let the code run
         else if (ammo == 0) return;
         
-        // show the ammo
+        // update the ammo
         world.showText("Ammo: "+ammo, 500, 525);
             
-        world.addObject(bullet, getX()+charWidth, getY());
+        // add the bullet to the world
+        world.addObject(bullet, getX() + charWidth, getY());
     }
 }
