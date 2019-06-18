@@ -75,13 +75,13 @@ public class Crab extends Actor {
             
             // show the score and round
             world.showText("Score: " + score, 50, 25);
-            world.showText("Round: " + round, 500, 25);
+            world.showText("Round: " + round, 50, 525);
             
             // if that was the last worm
             if(world.getObjects(Worm.class).size() == 0) {
                 // increment the round and update the text
                 round++;
-                world.showText("Round: " + round, 500, 25);
+                world.showText("Round: " + round, 50, 525);
                 
                 // spawn new worms
                 for (int i = 0; i < 10; i++) {

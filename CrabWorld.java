@@ -40,8 +40,8 @@ public class CrabWorld extends World
 
         // show the text
         showText("Score: 0", 50, 25);
-        showText("Round: 1", 500, 25);
-        showText("Lives: 3", 50, 525);
+        showText("Round: 1", 50, 525);
+        showText("Lives: 3", 500, 25);
         showText("Ammo: 1", 500, 525);
     }
 }

@@ -68,7 +68,7 @@ public class Lobster extends Actor
             Greenfoot.playSound("eating.wav");
             
             // update the lives
-            world.showText("Lives: " + Crab.lives, 50, 525); 
+            world.showText("Lives: " + Crab.lives, 500, 25); 
         }
         
         Actor worm;
