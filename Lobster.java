@@ -61,14 +61,14 @@ public class Lobster extends Actor
             
             // if there are no more lives, remove the world
             if (Crab.lives == 0) {
-                world.removeObjects(world.getObjects(null));
+                Greenfoot.stop();
             }
             
             // play the eating sound
             Greenfoot.playSound("eating.wav");
             
             // update the lives
-            world.showText("Lives: " + Crab.lives, 500, 25); 
+            world.showText("Lives: " + Crab.lives, 50, 525); 
         }
         
         Actor worm;

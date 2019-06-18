@@ -74,14 +74,14 @@ public class Crab extends Actor {
             score++;
             
             // show the score and round
-            world.showText("Score: "+score, 50, 25);
-            world.showText("Round: "+round, 300, 25);
+            world.showText("Score: " + score, 50, 25);
+            world.showText("Round: " + round, 500, 25);
             
             // if that was the last worm
             if(world.getObjects(Worm.class).size() == 0) {
                 // increment the round and update the text
                 round++;
-                world.showText("Round: "+round, 300, 25);
+                world.showText("Round: " + round, 500, 25);
                 
                 // spawn new worms
                 for (int i = 0; i < 10; i++) {
@@ -95,7 +95,7 @@ public class Crab extends Actor {
                 
                 // update the ammo
                 ammo = world.getObjects(Lobster.class).size();
-                world.showText("Ammo: "+ammo, 500, 525);
+                world.showText("Ammo: " + ammo, 500, 525);
             }
         }
     }

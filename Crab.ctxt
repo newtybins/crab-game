@@ -1,13 +1,16 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Crab\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment0.target=Crab
+comment0.text=\r\n\ Class\ to\ represent\ the\ crab.\r\n\ \r\n\ @author\ Jacob\ Smith\r\n\ @version\ 18/06/2019\r\n
 comment1.params=
-comment1.target=void\ controls()
-comment1.text=\r\n\ Controls\ -\ Logic\ for\ controlling\ the\ crab.\ This\ is\ called\ whenever\r\n\ the\ 'act'\ method\ gets\ called.\r\n
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Crab\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
-comment2.target=void\ eat()
-comment2.text=\r\n\ Eat\ -\ Logic\ for\ the\ crab\ eating\ worms.\ This\ is\ called\ whenever\ the\ 'act'\ method\r\n\ gets\ called.\r\n
+comment2.target=void\ controls()
+comment2.text=\r\n\ Controls\ -\ Logic\ for\ controlling\ the\ crab.\ This\ is\ called\ whenever\r\n\ the\ 'act'\ method\ gets\ called.\r\n
 comment3.params=
-comment3.target=void\ shoot()
-numComments=4
+comment3.target=void\ eat()
+comment3.text=\r\n\ Eat\ -\ Logic\ for\ the\ crab\ eating\ worms.\ This\ is\ called\ whenever\ the\ 'act'\ method\r\n\ gets\ called.\r\n
+comment4.params=
+comment4.target=void\ shoot()
+comment4.text=\r\n\ Shoot\ -\ Logic\ for\ making\ the\ crab\ shoot\ bullets.\r\n
+numComments=5

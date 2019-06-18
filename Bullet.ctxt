@@ -1,7 +1,9 @@
 #BlueJ class context
-comment0.params=rotation
-comment0.target=Bullet(int)
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Bullet\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment0.target=Bullet
+comment0.text=\r\n\ Class\ to\ represent\ a\ bullet.\r\n\ \r\n\ @author\ Jacob\ Smith\r\n\ @version\ 18/06/2019\r\n
+comment1.params=rotation
+comment1.target=Bullet(int)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Crab\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=3
