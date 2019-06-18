@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CrabWorld()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ CrabWorld.\r\n\ \r\n
+comment1.params=
+comment1.target=void\ prepare()
+comment1.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\r\n\ objects\ and\ add\ them\ to\ the\ world.\r\n
+numComments=2
