@@ -83,10 +83,31 @@ public class Lobster extends Actor
             Greenfoot.playSound("eating.wav");
             
             // decrease the crab's score
-            Crab.score = Crab.score > 0 ? Crab.score - 1 : 0;
+            CrabWorld.score = CrabWorld.score > 0 ? CrabWorld.score - 1 : 0;
             
             // update the score
-            world.showText("Score: " + Crab.score, 50, 25);
+            world.showText("Score: " + CrabWorld.score, 50, 25);
+            
+             // if that was the last worm
+            if(world.getObjects(Worm.class).size() == 0) {
+                // increment the round and update the text
+                CrabWorld.round++;
+                world.showText("Round: " + CrabWorld.round, 50, 525);
+                
+                // spawn new worms
+                for (int i = 0; i < 10; i++) {
+                    Worm newWorm = new Worm();
+                    world.addObject(newWorm, Greenfoot.getRandomNumber(540), Greenfoot.getRandomNumber(540));
+                }
+                
+                // add a new lobster to make it harder
+                Lobster lobster = new Lobster();
+                world.addObject(lobster, 520, 41);
+                
+                // update the ammo
+                Crab.ammo = world.getObjects(Lobster.class).size();
+                world.showText("Ammo: " + Crab.ammo, 500, 525);
+            }
         }
    }
 }

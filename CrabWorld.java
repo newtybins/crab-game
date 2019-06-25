@@ -8,13 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class CrabWorld extends World
 {
+    public static int score = 0;
+    public static int round = 1;
+    
     // constructor
     public CrabWorld() {   
         // set the size of the world
         super(560, 560, 1); 
         
         // update variables
-        Crab.score = 0;
+        score = 0;
         Crab.lives = 3;
 
         // prepare

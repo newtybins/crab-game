@@ -7,11 +7,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 18/06/2019
  */
 public class Crab extends Actor {    
-    public static int score = 0;
     public static int lives = 3;
-    private int round = 1;
     
-    private int ammo = 1;
+    public static int ammo = 1;
     private int charWidth = getImage().getWidth()-45;
     private int wait = 50;
     
@@ -71,17 +69,17 @@ public class Crab extends Actor {
             Greenfoot.playSound("eating.wav");
             
             // increment the score
-            score++;
+            CrabWorld.score++;
             
             // show the score and round
-            world.showText("Score: " + score, 50, 25);
-            world.showText("Round: " + round, 50, 525);
+            world.showText("Score: " + CrabWorld.score, 50, 25);
+            world.showText("Round: " + CrabWorld.round, 50, 525);
             
             // if that was the last worm
             if(world.getObjects(Worm.class).size() == 0) {
                 // increment the round and update the text
-                round++;
-                world.showText("Round: " + round, 50, 525);
+                CrabWorld.round++;
+                world.showText("Round: " + CrabWorld.round, 50, 525);
                 
                 // spawn new worms
                 for (int i = 0; i < 10; i++) {
