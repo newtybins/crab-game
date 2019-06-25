@@ -32,15 +32,15 @@ public class Crab extends Actor {
     public void controls() {
         move(4);
         
-        if (Greenfoot.isKeyDown("left")) {
+        if (Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
             turn(-3);
         }
         
-        if (Greenfoot.isKeyDown("right")) {
+        if (Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
             turn(3);
         }
         
-        if (Greenfoot.isKeyDown("f")) {
+        if (Greenfoot.isKeyDown("f") || Greenfoot.isKeyDown("space")) {
             if (wait == 0) {
                 wait = 50;
                 shoot();
